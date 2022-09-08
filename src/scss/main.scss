@@ -21,12 +21,13 @@ body {
 }
 
 .app {
-    width: 100%;
-    max-width: 375px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  max-width: 375px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   &__header {
     font-family: 'Roboto';
     font-style: normal;
@@ -34,30 +35,32 @@ body {
     font-size: 55px;
     line-height: 64px;
     color: #FFFFFF;
-    margin: 0 0 68px 0 ;
+    margin: 0 0 68px 0;
   }
 
-  &__logo-container {
-    position: relative;
-    &--text-center {
-      position: absolute;
-      top: 60%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-family: 'Roboto';
-      font-style: normal;
-      font-weight: 500;
-      font-size: 112px;
-      line-height: 131px;
-  }
-  }
+}
 
-  &__buttons {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.glass-container {
+  position: relative;
+
+  &__counter {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 112px;
+    line-height: 131px;
   }
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .button--add {
@@ -72,11 +75,10 @@ body {
   line-height: 21px;
   border: none;
   border-radius: 4px;
-}
-
-.button--add:hover {
-  text-decoration: underline;
-  text-decoration-color: #2196F3;;
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: #2196F3;
+  }
 }
 
 .button--delete {
@@ -90,9 +92,8 @@ body {
   line-height: 16px;
   margin: 0;
   text-align: center;
-}
-
-.button--delete:hover {
-  text-decoration: underline;
-  text-decoration-color: #2196F3;;
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: #2196F3;
+  }
 }

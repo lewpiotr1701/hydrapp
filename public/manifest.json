@@ -1,8 +1,8 @@
 {
-  "name": "WTF: PWA",
-  "short_name": "WTF: PWA",
-  "theme_color": "#2D2241",
-  "background_color": "#2D2241",
+  "name": "Hydrapp",
+  "short_name": "Hydrapp",
+  "theme_color": "#3767AD",
+  "background_color": "##3767AD",
   "display": "standalone",
   "orientation": "portrait",
   "scope": "/hydrapp/",

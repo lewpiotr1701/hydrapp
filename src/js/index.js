@@ -6,7 +6,7 @@ import '../scss/main.scss';
 
 /* place your code below */
 
-const glassesCounter = document.querySelector('.glasses--js');
+const glassesCounter = document.querySelector('.counter--js');
 const addButton = document.querySelector('.add--js');
 const deleteButton = document.querySelector('.delete--js');
 
