@@ -1,0 +1,16 @@
+.app {
+    width: 100%;
+    max-width: 375px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__header {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 55px;
+        color: #FFFFFF;
+        margin: 0 0 64px 0;
+    }
+}
