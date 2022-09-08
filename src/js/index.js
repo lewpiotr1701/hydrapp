@@ -1,39 +1,41 @@
 import '../scss/main.scss';
 
 // uncomment the lines below to enable PWA
-// import {registerSW} from './pwa.js';
-// registerSW();
+import { registerSW } from './pwa.js';
+registerSW();
 
 /* place your code below */
 
-const glassesCounter = document.querySelector('.counter--js');
+const glassCounter = document.querySelector('.counter--js');
 const addButton = document.querySelector('.add--js');
 const deleteButton = document.querySelector('.delete--js');
 
-let key = new Date().toISOString().slice(0, 10);
-let currentValue = localStorage.getItem(key);
- 
+const key = new Date().toLocaleString().slice(0, 10);
+const localStorageValue = localStorage.getItem(key);
+
+let currentGlassCounter = 0;
+
+
 // Check every time the page is refreshed
-if (currentValue === null) {
-    localStorage.setItem(key, '0');
-    glassesCounter.innerHTML = '0';
+if (localStorageValue) {
+    currentGlassCounter = parseInt(localStorageValue);
 } else {
-    glassesCounter.innerHTML = currentValue;
+    localStorage.setItem(key, 0);
 }
+
+glassCounter.innerHTML = currentGlassCounter;
 
 
 addButton.addEventListener('click', () => {
-    currentValue = parseInt(localStorage.getItem(key));
-    currentValue += 1;
-    localStorage.setItem(key, currentValue.toString());
-    glassesCounter.innerHTML = currentValue;
+    currentGlassCounter++;
+    localStorage.setItem(key, currentGlassCounter);
+    glassCounter.innerHTML = currentGlassCounter;
 })
 
 deleteButton.addEventListener('click', () => {
-    currentValue = parseInt(localStorage.getItem(key));
-    if (currentValue != 0) {
-        currentValue -= 1;
-        localStorage.setItem(key, currentValue.toString());
-        glassesCounter.innerHTML = currentValue;
+    if (currentGlassCounter > 0) {
+        currentGlassCounter--;
+        localStorage.setItem(key, currentGlassCounter);
+        glassCounter.innerHTML = currentGlassCounter;
     }
 })
