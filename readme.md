@@ -2,4 +2,4 @@
 
 # Hydrapp 
 
-Simple app that allows to count the glasses of water drunk every day. Application enables PWA so it is installable.
+Simple app that allows to count the glasses of water drunk every day. Application enables PWA which makes it is installable.
