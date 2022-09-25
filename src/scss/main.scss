@@ -1,6 +1,7 @@
 @import "modules/app.scss";
 @import "modules/glass.scss";
 @import "modules/buttons.scss";
+@import "modules/menu.scss";
 
 @import "~normalize.css";
 
@@ -19,6 +20,7 @@ html {
 body {
   background: #3767AD;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;

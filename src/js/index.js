@@ -23,19 +23,45 @@ if (localStorageValue) {
     localStorage.setItem(key, 0);
 }
 
-glassCounter.innerHTML = currentGlassCounter;
-
-
-addButton.addEventListener('click', () => {
-    currentGlassCounter++;
-    localStorage.setItem(key, currentGlassCounter);
+if (glassCounter) {
     glassCounter.innerHTML = currentGlassCounter;
-})
+}
 
-deleteButton.addEventListener('click', () => {
-    if (currentGlassCounter > 0) {
-        currentGlassCounter--;
+if (addButton) {
+    addButton.addEventListener('click', () => {
+        currentGlassCounter++;
         localStorage.setItem(key, currentGlassCounter);
         glassCounter.innerHTML = currentGlassCounter;
-    }
-})
+    })
+}
+
+if (deleteButton) {
+    deleteButton.addEventListener('click', () => {
+        if (currentGlassCounter > 0) {
+            currentGlassCounter--;
+            localStorage.setItem(key, currentGlassCounter);
+            glassCounter.innerHTML = currentGlassCounter;
+        }
+    })
+}
+
+
+// Hamburger menu
+const hamburger = document.querySelector('.hamburger--js');
+const navbarMenu = document.querySelector('.navbar__menu--js');
+
+hamburger.addEventListener('click', mobileMenu);
+
+function mobileMenu() {
+    hamburger.classList.toggle('active');
+    navbarMenu.classList.toggle('active');
+}
+
+const navbarLink = document.querySelectorAll('.navbar__link--js');
+
+navbarLink.forEach(e => e.addEventListener('click', closeMenu));
+
+function closeMenu() {
+    hamburger.classList.remove('active');
+    navbarMenu.classList.remove('active');
+}

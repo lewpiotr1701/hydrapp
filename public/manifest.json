@@ -2,7 +2,7 @@
   "name": "Hydrapp",
   "short_name": "Hydrapp",
   "theme_color": "#3767AD",
-  "background_color": "##3767AD",
+  "background_color": "#3767AD",
   "display": "standalone",
   "orientation": "portrait",
   "scope": "/hydrapp/",
